@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+:root{
+            /* ### Primary */
+    --text-svg: hsl(193, 38%, 86%);
+    --advice-domino-bg: hsl(150, 100%, 66%);
+
+            /* ### Neutral */
+    --divider: hsl(217, 19%, 38%);
+    --card-bg: hsl(217, 19%, 24%);
+    --main-bg: hsl(218, 23%, 16%);
+}
+
+body{
+    background: var(--main-bg);
+    font-family: 'Manrope', sans-serif;
+}
+
+main{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: auto;
+    padding: 40px 40px 0 40px;
+    background: var(--card-bg);
+    margin: auto;
+    border-radius: 12px;
+}
+
+#advice-number{
+    font-size: 10.5px;
+    text-align: center;
+    letter-spacing: 4.3pt;
+    color:var(--advice-domino-bg);
+    text-transform: uppercase;
+}
+
+#advice{
+    font-size: 28px;
+    text-align: center;
+    color: var(--text-svg);
+}
+
+button{
+    position: relative;
+    top: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    background: var(--advice-domino-bg);
+    border: none;
+    
+}
+
+#button:hover{
+    box-shadow: 0 0 20px 3px var(--advice-domino-bg);
+    cursor: pointer;
+}
+
+.rotate{
+    animation: rotate 1.4s;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width:550px) {
+    #container{
+        width: auto;
+        margin: auto 9px;
+        padding: 40px 20px 0 20px;
+    }
+
+    #advice{
+        font-size: 24px;
+    }
+
+    #divider{
+        content: url(images/pattern-divider-mobile.svg);
+    }
+}
