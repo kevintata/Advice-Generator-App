@@ -16,5 +16,6 @@ const getAdvice = async () =>{
 }
 
 function notate(){
-    button.classList.remove('rotate')    
+    button.classList.remove('rotate')
+    button.style.boxShadow = 'none'    
 }
